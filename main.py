@@ -14,3 +14,6 @@ try:
     db = 'dnd_database', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
 except:
     raise ValueError('Incorrect username and password pairing')
+
+# Create a random number to be used as a userID, compare it to an existing userID table on the database 
+# to make sure no number is reused

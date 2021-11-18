@@ -6,19 +6,11 @@ from collections import defaultdict
 import pymysql
 from array import array
 
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-#%% Simple selector (MySQL database)
-# import mysql.connector needs to be installed pip install mysql-connector
-import pymysql
 import flask
 
-username = input("MySQL Username: ");
-password = input("Password: ")
-
 try:
-    cnx = pymysql.connect(host = 'localhost', user = username, password = password, 
+    cnx = pymysql.connect(host = 'cs3200.cbnhan2y2mpk.us-east-2.rds.amazonaws.com',
+    user = 'admin', password = 'cs3200dnd', 
     db = 'dnd_database', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
 except:
     raise ValueError('Incorrect username and password pairing')

@@ -2,18 +2,17 @@
 # -*- coding: utf-8 -*-
 
 from collections import defaultdict
-
-import pymysql
 from array import array
-
+import pymysql
 import flask
+import operations
 
 try:
-    cnx = pymysql.connect(host = 'cs3200.cbnhan2y2mpk.us-east-2.rds.amazonaws.com',
+    connection = pymysql.connect(host = 'cs3200.cbnhan2y2mpk.us-east-2.rds.amazonaws.com',
     user = 'admin', password = 'cs3200dnd', 
     db = 'dnd_database', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
 except:
     raise ValueError('Incorrect username and password pairing')
 
-# Create a random number to be used as a userID, compare it to an existing userID table on the database 
-# to make sure no number is reused
+operations.parseInput(connection)
+

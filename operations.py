@@ -36,6 +36,7 @@ def loginUser(connection):
   row = cur.fetchone()
   if (row["name"] == username):
     currentUser = key
+    print("Login successful.")
   else:
     print("Username and user_id do not match. Please log in again \n")
     return
@@ -121,6 +122,11 @@ def modifyCharacter(currentUser, currentCharacter, connection):
     print('Please login or register. \n')
     return
 
+  # Checks if the command is called before the user has loaded a character
+  if (currentCharacter == ''):
+    print('No character has been selected. \n')
+    return
+
   print("Paramaters: name, strength, dexterity, constitution, charisma, intelligence, wisdom, proficiency \n"
   "Please enter \'return\' when you are finished modifying \n")
   while True:
@@ -131,6 +137,11 @@ def modifyCharacter(currentUser, currentCharacter, connection):
       change = input("Enter a new name.")
       cur = connection.cursor()
       cur.execute("UPDATE character SET ch_name = {} WHERE ch_name = {} and ch_id = {}".format(change, currentCharacter, currentUser))
+      cur.close()
+    elif (n == 'name'):
+      change = input("Enter a new level.")
+      cur = connection.cursor()
+      cur.execute("UPDATE character SET ch_level = {} WHERE ch_name = {} and ch_id = {}".format(change, currentCharacter, currentUser))
       cur.close()
     elif (n == 'strength'):
       change = input("Enter a value for STRENGTH.")
@@ -145,7 +156,7 @@ def modifyCharacter(currentUser, currentCharacter, connection):
     elif (n == 'constitution'):
       change = input("Enter a new value for CONSTITUTION.")
       cur = connection.cursor()
-      cur.execute("UPDATE character SET constutition = {} WHERE ch_name = {} and ch_id = {}".format(change, currentCharacter, currentUser))
+      cur.execute("UPDATE character SET constitution = {} WHERE ch_name = {} and ch_id = {}".format(change, currentCharacter, currentUser))
       cur.close()
     elif (n == 'charisma'):
       change = input("Enter a new value for CHARISMA.")
@@ -172,11 +183,15 @@ def modifyCharacter(currentUser, currentCharacter, connection):
     else:
       print("Unrecognizable command. Please try again.")
 
-
 def exportCharacter(currentUser, currentCharacter, connection):
   # Checks if the command is called before the user has registered or logged in.
   if (currentUser == ''):
     print('Please login or register. \n')
+    return
+
+  # Checks if the command is called before the user has loaded a character
+  if (currentCharacter == ''):
+    print('No character has been selected. \n')
     return
 
   cur = connection.cursor()
@@ -199,6 +214,11 @@ def deleteCharacter(currentUser, currentCharacter, connection):
     print('Please login or register. \n')
     return
 
+  # Checks if the command is called before the user has loaded a character
+  if (currentCharacter == ''):
+    print('No character has been selected. \n')
+    return
+    
   #DELETES CURRENT CHARACTER
   cur = connection.cursor()
   cur.execute("DELETE FROM characters WHERE ch_name = {} and ch_id = {}".format(currentCharacter, currentUser)) 

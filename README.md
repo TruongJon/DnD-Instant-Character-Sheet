@@ -1,5 +1,5 @@
-# DnD Instant Character Sheet
- 
+# DnD Instant Character Sheet 
+
 ## Supported Commands
 
 ### A user must first register an acccount or login to an existing account in order to use the other commands.

@@ -48,7 +48,7 @@ def loginUser(connection):
 def createCharacter(currentUser, connection):
   # Checks if the command is called before the user has registered or logged in.
   if (currentUser == ''):
-    print('Please login or register. \n')
+    print('Please login or register.')
     return
 
   currentCharacter = input('Enter a name for your character: \n')
@@ -136,7 +136,7 @@ def createCharacter(currentUser, connection):
 def loadCharacter(currentUser, connection):
   # Checks if the command is called before the user has registered or logged in.
   if (currentUser == ''):
-    print('Please login or register. \n')
+    print('Please login or register.')
     return
 
   # LIST ALL CHARACTERS TO CHOOSE FROM
@@ -161,7 +161,7 @@ def loadCharacter(currentUser, connection):
 def modifyCharacter(currentUser, currentCharacter, connection):
   # Checks if the command is called before the user has registered or logged in.
   if (currentUser == ''):
-    print('Please login or register. \n')
+    print('Please login or register.')
     return
 
   # Checks if the command is called before the user has loaded a character
@@ -221,7 +221,7 @@ def modifyCharacter(currentUser, currentCharacter, connection):
 def exportCharacter(currentUser, currentCharacter, connection):
   # Checks if the command is called before the user has registered or logged in.
   if (currentUser == ''):
-    print('Please login or register. \n')
+    print('Please login or register.')
     return
 
   # Checks if the command is called before the user has loaded a character

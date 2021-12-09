@@ -2,7 +2,7 @@
 
 ## Supported Commands
 
-### A user must first register an acccount or login to an existing account in order to use the other commands.
+### A user must first register an account or login to an existing account in order to use the other commands.
 
 ### **'register'** - Prompts the user for a username. Prints username and user_id for future login.
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from collections import defaultdict
@@ -16,4 +16,3 @@ except:
     raise ValueError('Incorrect username and password pairing')
 
 operations.parseInput(connection)
-

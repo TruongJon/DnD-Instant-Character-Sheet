@@ -81,23 +81,23 @@ def createCharacter(currentUser, connection):
   '\n Paladin / Ranger / Rogue / Sorcerer / Warlock / Wizard')
   char_level = input('Starting level of your character \n Lv. ')
   
-  # If level is high enough, assign subclass or prompt if multiple paths
+  # If level is high enough, assign subclass
   if (char_class == 'Barbarian' and char_level >= 3):
     char_subclass = 'Berserker'
   elif (char_class == 'Bard' and char_level >= 3):
     char_subclass = 'Lore'
   elif (char_class == 'Cleric'):
-    char_subclass = input('Please select a divine domain: \n Knowledge / Life / Light / Nature / Tempest / Trickery / War')
+    char_subclass = 'Life'
   elif (char_class == 'Druid' and char_level >= 2):
-    char_subclass = input('Please select a circle of the druids: \n Land / Moon')
-  elif (char_class == 'Druid' and char_level >= 3):
+    char_subclass = 'Land'
+  elif (char_class == 'Fighter' and char_level >= 3):
     char_subclass = 'Champion'
   elif (char_class == 'Monk' and char_level >= 3):
-    char_subclass = input('Please select a monastic tradition: \n Open Hand / Shadow / Four Elements')
+    char_subclass = 'Open Hand'
   elif (char_class == 'Paladin' and char_level >= 3):
-    char_subclass = input('Please select a sacred oath: \n Devotion / Ancients / Vengeance')
+    char_subclass = 'Devotion'
   elif (char_class == 'Ranger' and char_level >= 3):
-    char_subclass = input('Please select a ranger archetype: \n Hunter / Beast Master')
+    char_subclass = 'Hunter'
   elif (char_class == 'Rogue' and char_level >= 3):
     char_subclass = 'Thief'
   elif (char_class == 'Sorcerer'):

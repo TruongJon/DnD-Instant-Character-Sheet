@@ -16,3 +16,4 @@ except:
     raise ValueError('Incorrect username and password pairing')
 
 operations.parseInput(connection)
+connection.commit()

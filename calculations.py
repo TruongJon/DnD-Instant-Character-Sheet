@@ -29,7 +29,7 @@ def hitpoints(ch_class, ch_level, constitution):
 
 def abilityscore(stat):
     ret = -5
-    for x in range(22):
+    for x in range(stat):
         if (x % 2) == 0:
             ret += 1
     return ret

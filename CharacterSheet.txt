@@ -1,0 +1,21 @@
+Session Character Sheet 
+Yoshiko Lv. 1
+Class: Wizard, Subclass: School of Evocation
+Race: Human, Subrace: None
+Background: Acolyte, Hitpoints: 16
+Strength: 10 [0]
+Dexterity: 10 [0]
+Constitution: 10 [0]
+Charisma: 10 [0]
+Intelligence: 10 [0]
+Wisdom: 10 [0]
+Proficiencies Bonus: 2
+Saving Throw Proficiencies: Intelligence, Wisdom, 
+Skill Proficiencies: Insight, Religion, Choose two from Arcana, History,
+Weapon Proficiencies: Daggers, Darts, Slings, Quarterstaffs, Light Crossbows
+Armor Proficiencies
+Tool Proficiencies
+Language Proficiencies: Common, One language of your choice, Two languages of your choice
+Racial Features: 
+Background Feature: As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle. You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there. This could be the temple where you used to serve, 
+
